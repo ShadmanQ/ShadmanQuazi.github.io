@@ -22,7 +22,7 @@ function setup() {
   textSize(fontsize);
   textAlign(CENTER);
 
-  //sets up the
+  //intializes the textX and textY variables with respect to the users window
   textX = width/2;
   textY = height/2;
 
@@ -35,7 +35,7 @@ function draw() {
   fill(0);
   text(message, textX, textY);
   //to my understanding, the textBounds function returns an invisible rectangle
-  //which is meant be the size of the text string
+  //which is meant be at the size and position of your desired text string, using the font fize you chose
   //this box is used to check whether the mouse is hovering over the text or not
   textBox = font.textBounds(message,textX,textY,fontsize);
 
