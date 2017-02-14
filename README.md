@@ -1,6 +1,6 @@
-Uhm, hi there! 
+#Uhm, hi there! 
 
-I'm taking a game programming class this semester and I'm using GitHub to host my files. We're learning JavaScript through the P5.js library, so everything I'm gonna be uploading is gonna be a series of HTML and sketch.js files.
+##I'm taking a game programming class this semester and I'm using GitHub to host my files. We're learning JavaScript through the P5.js library, so everything I'm gonna be uploading is gonna be a series of HTML and sketch.js files.
 
 Here's what I've got so far:
 
