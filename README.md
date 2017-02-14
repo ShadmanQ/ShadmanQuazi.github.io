@@ -4,6 +4,6 @@
 
 Here's what I've got so far:
 
-Week 2: shadmanquazi.github.io/interactivesketch.html
+Week 2: https://shadmanquazi.github.io/interactivescene.html
 
 If you've found this I'm assuming you're able to find the rest of my files on your own as well. In that case, enjoy!
