@@ -1,9 +1,9 @@
 //series of arrays for the tweet itself
-var prewords = ["ridiculous","idiotic","pointless","terrible"];
-var words = ["rumors","accusations","claims","ideas","thoughts"];
-var accusations = ["my gross incompetence", "my love affair with Putin","my tiny hands spilling coffee \non the nuclear codes","my failing marriage","my totally NOT Islamophobic ban","my VERY GOOD WALL"];
+var prewords = ["ridiculous","idiotic","stupid","nonsense","poppy-cock"];
+var words = ["rumors","accusations","claims","ideas","thoughts","words"];
+var accusations = ["my gross incompetence", "my love affair with Putin","my tiny hands \nspilling coffee on the nuclear codes","my failing marriage","my totally NOT Islamophobic ban","my VERY GOOD WALL"];
 var people = ["Bad Hombres","The Lizard People", "MSNBC", "Crooked Hillary and her team", "The illegals", "my sworn enemy, my conscience"];
-var altnames = ["fake news", "..well, those might actually be valid \npoints","a load of baloney","PURE LIES", "INSIDIOUS DISSENT", "SEVERE ACTS OF TREASON"];
+var altnames = ["fake news", "...well, those might actually be \nvalid concerns","a load of baloney","PURE LIES", "INSIDIOUS DISSENT", "TREASONOUS"];
 var exclamation = ["SAD!","LOSERS!","STUPID.","LIES.", "FIRED.","IDIOTS!","PUNISHMENT WILL BE HARSH!"];
 
 //variables to store asset files
