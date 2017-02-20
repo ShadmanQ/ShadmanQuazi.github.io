@@ -3,7 +3,7 @@ var prewords = ["ridiculous","idiotic","stupid","nonsense","poppy-cock"];
 var words = ["rumors","accusations","claims","ideas","thoughts","words"];
 var accusations = ["my gross incompetence", "my love affair with Putin","my tiny hands \nspilling coffee on the nuclear codes","my failing marriage","my totally NOT Islamophobic ban","my VERY GOOD WALL"];
 var people = ["Bad Hombres","The Lizard People", "MSNBC", "Crooked Hillary \nand her team", "The illegals", "my sworn enemy, \n my conscience"];
-var altnames = ["fake news", "...well, those might actually be \nvalid concerns","a load of baloney","PURE LIES", "INSIDIOUS DISSENT", "TREASONOUS"];
+var altnames = ["fake news", "...well, those might actually be \nvalid concerns","a load of baloney","PURE LIES", "INSIDIOUS DISSENT\n", "TREASONOUS"];
 var exclamation = ["SAD!","LOSERS!","STUPID.","LIES.", "FIRED.","IDIOTS!","PUNISHMENT WILL BE HARSH!"];
 
 //variables to store asset files
