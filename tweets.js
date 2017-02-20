@@ -2,9 +2,9 @@
 var prewords = ["ridiculous","idiotic","stupid","nonsense","poppy-cock"];
 var words = ["rumors","accusations","claims","ideas","thoughts","words"];
 var accusations = ["my gross incompetence", "my love affair with Putin","my tiny hands \nspilling coffee on the nuclear codes","my failing marriage","my totally NOT Islamophobic ban","my VERY GOOD WALL"];
-var people = ["Bad Hombres","The Lizard People", "MSNBC", "Crooked Hillary \nand her team", "The illegals", "my sworn enemy, \n my conscience"];
-var altnames = ["fake news", "...well, those might actually be \nvalid concerns","a load of baloney","PURE LIES", "INSIDIOUS DISSENT\n", "TREASONOUS"];
-var exclamation = ["SAD!","LOSERS!","STUPID.","LIES.", "FIRED.","IDIOTS!","PUNISHMENT WILL BE HARSH!"];
+var people = ["Bad Hombres","The Lizard People", "MSNBC", "Crooked Hillary \nand her team", "The illegals", "my own conscience"];
+var altnames = ["fake news", "...well, those might actually be \nvalid concerns","a load of baloney","PURE LIES", "INSIDIOUS DISSENT\n", "TREASON"];
+var exclamation = ["SAD!","LOSERS!","STUPID.","LIES.", "FIRED.","IDIOTS!","\nPUNISHMENT WILL BE HARSH!"];
 
 //variables to store asset files
 var font;
@@ -50,9 +50,9 @@ function setup() {
 	text("@RealDonaldTrump",100,(height/5)+100);
 	
 	//creates a fully formed tweet based on the phrases previously selected
-	textSize(60);
+	textSize(55);
 	textAlign(LEFT,TOP);
-	var tweet ="The " + prewords[randoPreWord]+ " "+ words[randoWord] +" of "+ accusations[randoAccu] +"\nare clearly " + altnames[randoAlt] + " from " + people[randoPeeps] + ".\n" + exclamation[randoExcl];
+	var tweet ="The " + prewords[randoPreWord]+ " "+ words[randoWord] +" of "+ accusations[randoAccu] +"\nare clearly " + altnames[randoAlt] + " from " + people[randoPeeps] + ". " + exclamation[randoExcl];
 	text(tweet,0,(height/5)+100);
 	tweetbox = font.textBounds(tweet,0,(height/5)+100,60);
 
@@ -60,9 +60,11 @@ function setup() {
 	var timestamps = ["AM","PM"]
 	var months= ["Jan","Feb","Mar","Apr","May","June","July","Aug","Sept","Oct","Nov","Dec"];
 	textSize(25);
-	text(+int(random(1,12)) +":" +int(random(9,59)) + random(timestamps) + "  -  " + int(random(1,31)) + " " + random(months) + " 2017", tweetbox.x,tweetbox.y+tweetbox.h+220);
+	text(+int(random(1,12)) +":" +int(random(9,59)) + random(timestamps) + "  -  " + int(random(1,31)) + " " + random(months) + " 2017", tweetbox.x,height-190);
+
 }
 
 function draw() {
+	
   
 }
