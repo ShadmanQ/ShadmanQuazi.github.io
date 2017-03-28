@@ -2,7 +2,7 @@ var song;
 var fft;
 
 function preload(){
-song = loadSound("mario.mp3");
+song = loadSound("derezzed.mp3");
 }
 
 function setup() {
