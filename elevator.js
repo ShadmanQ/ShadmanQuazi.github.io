@@ -51,7 +51,7 @@ function setup() {
     obstacles.push(new Obstacle(CrowdImg));
     obstacles.push(new Obstacle(SignImg));
  	theGuy = new Person;
-    elevImg = loadImage("assets/v.png")
+    elevImg = loadImage("assets/elevator/v.png")
     problemElevator = int(random(elevators.length));  //variable to choose which elevator has an obstacle
     elevators[problemElevator].hasObstacle = true;
     winMessage = winText[int(random(winText.length))];
