@@ -42,7 +42,6 @@ function preload(){
 }
 
 function setup() {
-    textFont(theFont);
 	createCanvas(windowWidth, windowHeight);
 	background(230 );
     floorY = height/3 *2; //floor height
@@ -52,7 +51,7 @@ function setup() {
     obstacles.push(new Obstacle(CrowdImg));
     obstacles.push(new Obstacle(SignImg));
  	theGuy = new Person;
-    elevImg = loadImage("assets/elevator/v.png");
+    elevImg = loadImage("assets/v.png")
     problemElevator = int(random(elevators.length));  //variable to choose which elevator has an obstacle
     elevators[problemElevator].hasObstacle = true;
     winMessage = winText[int(random(winText.length))];
@@ -60,6 +59,7 @@ function setup() {
     thisObstacle = int(random(0,2));// variable to choose which obstacle to have in the elevator
     var timer = timerDuration
     fill(255,0,0);
+    textFont(theFont);
     
 }
 
@@ -71,8 +71,8 @@ function draw() {
    	textSize(25);
     fill(55)
     textAlign(LEFT);
-    text("Choose the right elevator \nand avoid the obstacles \nto get to class",20,50);
-    text("You've been to " + onTimecount + " classes on time",20,110);
+    text("Choose the right elevator \nand avoid the obstacles \nto get to class!",20,50);
+    text("You've been to " + onTimecount + " classes on time.",20,110);
     //change color of game directions depending on elevator direction
     if (theGuy.direction == 'down'){
         fill(255,0,0)
@@ -80,7 +80,7 @@ function draw() {
     if (theGuy.direction == 'up'){
         fill(0,200,0)
     }
-    text('You have to go ' + theGuy.direction, 20,130)
+    text('You have to go ' + theGuy.direction, 20,140)
 
 	// sets up timer in top right corner
 	timer = timerDuration - (millis()-timerOffset);
@@ -160,7 +160,7 @@ function draw() {
 	}
 
 	if (gameOver && PlayerStatus == "loss"){
-        textFont(theFont2);
+
 		 if (!womp.isPlaying()){
                 womp.play();
             }
@@ -169,13 +169,15 @@ function draw() {
     	}	
         fill(255,0,0)
 		textSize(120);
+		textFont(theFont2);
 		text(loseMessage, width/2,height/2);
 		
 	}
 	if (gameOver && PlayerStatus == "win"){
-        textFont(theFont2);
+		
         fill(0,255,0)
-		textSize(100);
+		textSize(120);
+		textFont(theFont2);
 		text(winMessage, width/2,height/2);
 		if (!applause.isPlaying()){
 			applause.play();
@@ -190,13 +192,11 @@ function draw() {
 }
 
 function Reset(){
-	onTimecount +=1;
+	onTimecount +=1;            
 	elevators[problemElevator].hasObstacle = false;
 	problemElevator = int(random(elevators.length));
 	elevators[problemElevator].hasObstacle = true;
 	for (var i = 0; i < elevators.length; i++)
-		elevators[i].x1 -= 150;
-			elevators[i].xDistance -= 150;
 		{
 			elevators[i].isOpen = false;
 			if (onTimecount > 3){
@@ -214,10 +214,12 @@ function Reset(){
 
 	if (onTimecount == 3 || onTimecount == 6){
 		for  (var i = 0; i < elevators.length; i++){
-			
+		elevators[i].x1 -= 150;
+        elevators[i].xDistance -= 150;
+         }
+         elevators.push (new Elevator((elevators[(elevators.length)-1].x1+280), floorY));
 		}
-	elevators.push (new Elevator((elevators[(elevators.length)-1].x1+280), floorY));
-	}
+	
 
 	PlayerStatus = "blank";
 	theGuy.direction = random(["up","down"]);
@@ -227,9 +229,7 @@ function Reset(){
 	timer = timerDuration;
 	winMessage = winText[int(random(winText.length))];
 	frameRate(30);
-
 }
-
 //elevator object
 function Elevator(x,y){
     rectMode(CORNERS);
