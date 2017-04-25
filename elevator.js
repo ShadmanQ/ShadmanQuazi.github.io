@@ -190,20 +190,34 @@ function draw() {
 }
 
 function Reset(){
-    winMessage = winText[random(winText.length)];
-    textFont(theFont);
 	onTimecount +=1;
 	elevators[problemElevator].hasObstacle = false;
 	problemElevator = int(random(elevators.length));
 	elevators[problemElevator].hasObstacle = true;
 	for (var i = 0; i < elevators.length; i++)
+		elevators[i].x1 -= 150;
+			elevators[i].xDistance -= 150;
 		{
 			elevators[i].isOpen = false;
 			if (onTimecount > 3){
 				elevators[i].openTime = int(random(2000,4000));
 				elevators[i].duration = int(random(750,900));
 			}
+
+			if (onTimecount > 6)
+			{
+				elevators[i].openTime = int(random(1000,1500));
+				elevators[i].duration = int(random(600,800));
+
+			}
 		}
+
+	if (onTimecount == 3 || onTimecount == 6){
+		for  (var i = 0; i < elevators.length; i++){
+			
+		}
+	elevators.push (new Elevator((elevators[(elevators.length)-1].x1+280), floorY));
+	}
 
 	PlayerStatus = "blank";
 	theGuy.direction = random(["up","down"]);
@@ -211,6 +225,7 @@ function Reset(){
 	timerDuration -= 5000;
 	timerOffset = millis();
 	timer = timerDuration;
+	winMessage = winText[int(random(winText.length))];
 	frameRate(30);
 
 }
