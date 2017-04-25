@@ -11,7 +11,7 @@ var lastOpen = 0;
 var openInterval = 500;
 var lastClose = 0;
 var closeInterval = 400;
-var timerDuration = 30 * 1000;
+var timerDuration = 45 * 1000;
 var gameOver = false;
 
 var winTime = 0;
