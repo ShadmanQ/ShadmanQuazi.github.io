@@ -72,7 +72,7 @@ function draw() {
     fill(55)
     textAlign(LEFT);
     text("Choose the right elevator \nand avoid the obstacles \nto get to class",20,50);
-    text("You've been to " + onTimecount + " classes on time",20,120);
+    text("You've been to " + onTimecount + " classes on time",20,130);
     //change color of game directions depending on elevator direction
     if (theGuy.direction == 'down'){
         fill(255,0,0)
